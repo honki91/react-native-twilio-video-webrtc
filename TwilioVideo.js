@@ -23,7 +23,11 @@ export default class TwilioVideo extends Component {
     this.startCall = this.startCall.bind(this)
     this.endCall = this.endCall.bind(this)
 
-    this._eventEmitter = new NativeEventEmitter(TWVideoModule)    
+    this._eventEmitter = new NativeEventEmitter(TWVideoModule)
+
+    if (this.props.microphone) {
+      TWVideoModule.addMicrophone();
+    }
   }
 
 
@@ -41,7 +45,6 @@ export default class TwilioVideo extends Component {
   endCall(){
     TWVideoModule.disconnect()
   }
-
 
   _unregisterEvents() {
     this._subscriptions.forEach(e => e.remove())
