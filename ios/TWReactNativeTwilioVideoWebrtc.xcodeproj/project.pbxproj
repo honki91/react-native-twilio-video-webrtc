@@ -13,6 +13,7 @@
 		E851584F1E3ACF4C00D9B0C6 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E85158471E3ACF4C00D9B0C6 /* ALView+PureLayout.m */; };
 		E85158501E3ACF4C00D9B0C6 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E85158491E3ACF4C00D9B0C6 /* NSArray+PureLayout.m */; };
 		E85158511E3ACF4C00D9B0C6 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E851584B1E3ACF4C00D9B0C6 /* NSLayoutConstraint+PureLayout.m */; };
+		F141D7CD1E6F535300026400 /* TWRemotePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = F141D7CB1E6F535300026400 /* TWRemotePreview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		E851584C1E3ACF4C00D9B0C6 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
 		E851584D1E3ACF4C00D9B0C6 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		E851584E1E3ACF4C00D9B0C6 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		F141D7CB1E6F535300026400 /* TWRemotePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRemotePreview.m; sourceTree = "<group>"; };
+		F141D7CC1E6F535300026400 /* TWRemotePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRemotePreview.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				F141D7CB1E6F535300026400 /* TWRemotePreview.m */,
+				F141D7CC1E6F535300026400 /* TWRemotePreview.h */,
 				E85158451E3ACF4C00D9B0C6 /* PureLayout */,
 				3D458EBB1DCE592E0044D480 /* TWRemotePreviewManager.h */,
 				3D458EBC1DCE592E0044D480 /* TWRemotePreviewManager.m */,
@@ -152,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D458EC21DCE592E0044D480 /* TWVideoModule.m in Sources */,
+				F141D7CD1E6F535300026400 /* TWRemotePreview.m in Sources */,
 				3D458EC31DCE592E0044D480 /* TWVideoPreviewManager.m in Sources */,
 				3D458EC11DCE592E0044D480 /* TWRemotePreviewManager.m in Sources */,
 				E851584F1E3ACF4C00D9B0C6 /* ALView+PureLayout.m in Sources */,
