@@ -4,6 +4,7 @@
 #import "TWRemotePreviewManager.h"
 #import "PureLayout/PureLayout.h"
 #import "TWVideoModule.h"
+#import "TWRemotePreview.h"
 
 @interface TWRemotePreviewManager()
 
@@ -12,6 +13,8 @@
 @implementation TWRemotePreviewManager
 
 RCT_EXPORT_MODULE()
+
+RCT_EXPORT_VIEW_PROPERTY(width, NSNumber)
 
 -(void)dealloc{
 
@@ -27,20 +30,23 @@ RCT_EXPORT_MODULE()
 - (UIView *)view
 
 {
-  
-  UIView* view = [[UIView alloc] init];
-  
+
+  TWRemotePreview* view = [[TWRemotePreview alloc] init];
+
   TWVideoModule* videoModule = [self.bridge moduleForName:@"TWVideoModule"];
-  
+  view.remoteMediaView = videoModule.remoteMediaView;
+
   if (videoModule) {
     [videoModule.remoteMediaView removeFromSuperview];
     [view addSubview:videoModule.remoteMediaView];
-    [videoModule.remoteMediaView autoPinEdgesToSuperviewEdges];
-      
+    [videoModule.remoteMediaView autoCenterInSuperview];
+    [videoModule.remoteMediaView autoPinEdgeToSuperviewEdge:ALEdgeTop];
+    [videoModule.remoteMediaView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+
   }
-  
+
   return view;
-  
+
 }
 
 @end
